@@ -1,0 +1,3 @@
+
+add_executable(gflags_declare_test gflags_declare_test.cc gflags_declare_flags.cc)
+target_link_libraries(gflags_declare_test gflags_nothreads)

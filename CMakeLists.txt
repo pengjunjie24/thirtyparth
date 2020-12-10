@@ -60,3 +60,4 @@ include_directories(
 )
 
 add_subdirectory(googletest-1.10.0)
+add_subdirectory(gflags-2.2.2)
