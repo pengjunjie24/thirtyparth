@@ -59,5 +59,18 @@ include_directories(
     ${PROJECT_SOURCE_DIR}
 )
 
+#获取子目录名称的宏
+macro(SUBDIRLIST result curdir)
+  file(GLOB children RELATIVE ${curdir} ${curdir}/*)
+  set(dirlist "")
+  foreach(child ${children})
+    if(IS_DIRECTORY ${curdir}/${child})
+      list(APPEND dirlist ${child})
+    endif()
+  endforeach()
+  set(${result} ${dirlist})
+endmacro()
+
 add_subdirectory(googletest-1.10.0)
 add_subdirectory(gflags-2.2.2)
+add_subdirectory(nlohmannjson-3.9.1)
