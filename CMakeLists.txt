@@ -47,9 +47,9 @@ endif()
 set(CMAKE_CXX_COMPILER "g++")
 add_compile_options(-std=c++14)
 #设置Debug模式选项
-set(CMAKE_CXX_FLAGS_DEBUG "-O0 -Wall -g2 -ggdb")
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g2 -ggdb")
 #设置Release模式选项
-set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -finline-limit=1000 -DNDEBUG")
+set(CMAKE_CXX_FLAGS_RELEASE "-O2 -finline-limit=1000 -DNDEBUG")
 #可执行文件存放路径
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 #库文件存放路径
